@@ -1,5 +1,4 @@
 ---
-import { SEO } from "astro-seo";
 import Footer from "@/components/footer.astro";
 import Navbar from "@/components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
@@ -20,8 +19,10 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Anisha Enterprises"
+  : "Anisha Enterprises - Strategic Workforce Solutions | IT Recruitment & HR Outsourcing";
+
+const description = "Anisha Enterprises is a national-level workforce solutions firm offering IT recruitment, non-IT staffing, executive search, HR outsourcing, and payroll compliance services across India.";
 ---
 
 <!doctype html>
@@ -32,28 +33,23 @@ const makeTitle = title
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
-    <SEO
-      title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
-      canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `Astroship - Starter Template for Astro`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Astroship Homepage Screenshot",
-        },
-      }}
-    />
+    <title>{makeTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content="Anisha Enterprises - Strategic Workforce Solutions" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={resolvedImageWithDomain} />
+    <meta property="og:image:alt" content="Anisha Enterprises - Strategic Workforce Solutions" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={makeTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedImageWithDomain} />
   </head>
   <body>
     <Navbar />

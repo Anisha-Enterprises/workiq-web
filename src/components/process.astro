@@ -1,0 +1,72 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Requirement Analysis",
+    description: "In-depth consultation to define role specifications, organizational culture fit, and strategic workforce objectives.",
+  },
+  {
+    number: "02",
+    title: "Talent Mapping & Sourcing",
+    description: "Multi-channel sourcing using proprietary databases, professional networks, and sector-specific talent pools.",
+  },
+  {
+    number: "03",
+    title: "Screening & Assessment",
+    description: "Rigorous evaluation through competency-based interviews, technical assessments, and background verification protocols.",
+  },
+  {
+    number: "04",
+    title: "Shortlisting & Presentation",
+    description: "Curated candidate profiles with detailed assessment reports, ensuring only pre-qualified talent reaches your team.",
+  },
+  {
+    number: "05",
+    title: "Interview Coordination & Offer Management",
+    description: "End-to-end interview scheduling, stakeholder alignment, compensation benchmarking, and offer negotiation support.",
+  },
+  {
+    number: "06",
+    title: "Onboarding & Retention Support",
+    description: "Structured onboarding facilitation and 90-day engagement monitoring to ensure long-term placement success.",
+  },
+];
+---
+
+<section id="process" class="py-20">
+  <div class="max-w-(--breakpoint-xl) mx-auto px-5">
+    <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)] mb-4">
+        Our Methodology
+      </p>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-[var(--color-navy)] text-balance"
+        style="font-family: var(--font-heading);">
+        A Structured Recruitment Framework
+      </h2>
+      <p class="text-lg mt-4 text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+        Every engagement follows a disciplined, compliance-driven methodology built for quality and governance.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        steps.map((step) => (
+          <div class="relative pl-16">
+            <span
+              class="absolute left-0 top-0 text-5xl font-bold text-[var(--color-accent)] opacity-30"
+              style="font-family: var(--font-heading);">
+              {step.number}
+            </span>
+            <h3 class="text-lg font-bold text-[var(--color-navy)] mb-2" style="font-family: var(--font-heading);">
+              {step.title}
+            </h3>
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

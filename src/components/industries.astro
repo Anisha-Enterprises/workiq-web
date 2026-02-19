@@ -1,0 +1,43 @@
+---
+const industries = [
+  { name: "Information Technology", note: "Full-stack, cloud, data, and cybersecurity talent" },
+  { name: "Banking & Financial Services", note: "Regulatory-aware hiring across BFSI verticals" },
+  { name: "Manufacturing & Engineering", note: "Shop floor to plant leadership staffing" },
+  { name: "Healthcare & Pharmaceuticals", note: "Clinical, regulatory, and commercial talent" },
+  { name: "Retail & E-Commerce", note: "Omnichannel operations and digital-first teams" },
+  { name: "Telecom & Infrastructure", note: "Network engineering and field operations" },
+  { name: "Energy & Utilities", note: "Conventional and renewable sector specialists" },
+  { name: "Logistics & Supply Chain", note: "Warehousing, fleet, and distribution experts" },
+];
+---
+
+<section id="industries" class="py-20 bg-[var(--color-navy)]">
+  <div class="max-w-(--breakpoint-xl) mx-auto px-5">
+    <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)] mb-4">
+        Sector Expertise
+      </p>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-[var(--color-white)] text-balance"
+        style="font-family: var(--font-heading);">
+        Industries We Serve
+      </h2>
+      <p class="text-lg mt-4 text-gray-400 max-w-2xl mx-auto">
+        Deep domain knowledge across sectors that demand precision, compliance, and performance.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        industries.map((industry) => (
+          <div class="border border-[var(--color-navy-muted)] rounded-lg p-6 hover:border-[var(--color-accent)] transition-colors duration-300">
+            <h3 class="text-lg font-semibold text-[var(--color-white)] mb-2">
+              {industry.name}
+            </h3>
+            <p class="text-sm text-gray-400 leading-relaxed">{industry.note}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

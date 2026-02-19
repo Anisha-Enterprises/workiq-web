@@ -1,0 +1,49 @@
+---
+const metrics = [
+  {
+    stat: "42%",
+    label: "Reduction in Time-to-Hire",
+    description: "Accelerated hiring cycles through pre-qualified talent pipelines and structured screening methodologies.",
+  },
+  {
+    stat: "21 Days",
+    label: "Average Leadership Placement",
+    description: "Senior and executive-level roles closed within three weeks, leveraging deep networks and rigorous assessment frameworks.",
+  },
+];
+---
+
+<section class="py-20">
+  <div class="max-w-(--breakpoint-xl) mx-auto px-5">
+    <div class="text-center mb-16">
+      <p class="text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)] mb-4">
+        Measurable Outcomes
+      </p>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-[var(--color-navy)] text-balance"
+        style="font-family: var(--font-heading);">
+        Impact That Speaks for Itself
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      {
+        metrics.map((metric) => (
+          <div class="text-center p-8 border border-[var(--color-border-subtle)] rounded-lg">
+            <p
+              class="text-5xl md:text-6xl font-bold text-[var(--color-navy)] mb-2"
+              style="font-family: var(--font-heading);">
+              {metric.stat}
+            </p>
+            <p class="text-lg font-semibold text-[var(--color-accent)] mb-3">
+              {metric.label}
+            </p>
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              {metric.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
