@@ -1,53 +1,55 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "@/assets/hero.png";
 import Link from "@/components/ui/link.astro";
-import { Icon } from "astro-icon/components";
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
-  <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
-    </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+<main class="pt-20 pb-16 md:pt-28 md:pb-24">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)] mb-4">
+      Strategic Workforce Solutions
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <h1
+      class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-[var(--color-navy)] text-balance"
+      style="font-family: var(--font-heading);">
+      Building Workforce Strategies That Drive Business Growth
+    </h1>
+    <p class="text-lg md:text-xl mt-6 text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
+      End-to-end talent acquisition and workforce management across IT and Non-IT
+      sectors. Structured methodologies. Compliance-first approach. Measurable outcomes.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Download for Free
+        href="#employer-cta"
+        size="lg"
+        class="flex items-center justify-center !px-8 !py-3.5 text-base font-semibold">
+        Hire Top Talent
       </Link>
       <Link
+        href="#candidate-cta"
         size="lg"
         style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        class="flex items-center justify-center !px-8 !py-3.5 text-base font-semibold">
+        Explore Opportunities
       </Link>
+    </div>
+  </div>
+
+  <!-- Trust Indicators -->
+  <div class="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-4">
+    <div class="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+      <svg class="w-4 h-4 text-[var(--color-accent)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <span>Pan-India Presence</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+      <svg class="w-4 h-4 text-[var(--color-accent)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <span>IT & Non-IT Expertise</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+      <svg class="w-4 h-4 text-[var(--color-accent)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <span>Compliance-First Approach</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+      <svg class="w-4 h-4 text-[var(--color-accent)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <span>End-to-End Solutions</span>
     </div>
   </div>
 </main>
