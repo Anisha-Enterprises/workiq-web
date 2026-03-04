@@ -21,10 +21,10 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Anisha Enterprises"
-  : "Anisha Enterprises - Strategic Workforce Solutions | IT Recruitment & HR Outsourcing";
+  ? title + " | " + "WorkIQ"
+  : "WorkIQ - Strategic Workforce Solutions | IT Recruitment & HR Outsourcing";
 
-const description = "Anisha Enterprises is a national-level workforce solutions firm offering IT recruitment, non-IT staffing, executive search, HR outsourcing, and payroll compliance services across India.";
+const description = "WorkIQ is a national-level workforce solutions firm offering IT recruitment, non-IT staffing, executive search, HR outsourcing, and payroll compliance services across India.";
 ---
 
 <!doctype html>
@@ -42,12 +42,12 @@ const description = "Anisha Enterprises is a national-level workforce solutions 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content="Anisha Enterprises - Strategic Workforce Solutions" />
+    <meta property="og:title" content="WorkIQ - Strategic Workforce Solutions" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={resolvedImageWithDomain} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Anisha Enterprises - Strategic Workforce Solutions" />
+    <meta property="og:image:alt" content="WorkIQ - Strategic Workforce Solutions" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
